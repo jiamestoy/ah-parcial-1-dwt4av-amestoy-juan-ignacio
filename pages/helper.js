@@ -48,7 +48,3 @@ function createPage(title) {
 export {
     createPage,
 }
-
-export default {
-    createPage,
-}

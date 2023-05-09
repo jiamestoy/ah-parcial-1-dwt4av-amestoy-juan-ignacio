@@ -1,25 +1,31 @@
-import { createServer } from 'node:http';
-import { createPage } from './pages/helpers.js';
+//import { createServer } from 'node:http';
+import { createPage } from './pages/helper.js';
+import express from 'express';
 
-const server = createServer(function(req, res){
+const app = express();
 
-    if (req.url === '/') {
-        res.write(createPage('Home'))
-    } else if (req.url === '/mobile') {
-        res.write(createPage('Mobile'))
-    } else if (req.url === '/landing') {
-        res.write(createPage('Landing Page'))
-    } else if (req.url === '/webapp') {
-        res.write(createPage('Web App'))
-    } else if (req.url === '/ecommerce') {
-        res.write(createPage('e-Commerce'))
-    } else if (req.url === '/games') {
-        res.write(createPage('Games'))
-    } else {
-        res.write(createPage('Página Inexistente'))
-    }
-
-    res.end();
+app.get('/', function(req, res) {
+    res.write(createPage('Home'))
 })
 
-server.listen(2222);
+app.get('/mobile', function(req, res) {
+    res.write(createPage('Mobile'))
+})
+
+app.get('/landing', function(req, res) {
+    res.write(createPage('Landing Page'))
+})
+
+app.get('/webapp', function(req, res) {
+    res.write(createPage('Web App'))
+})
+
+app.get('/ecommerce', function(req, res) {
+    res.write(createPage('e-Commerce'))
+})
+
+app.get('/games', function(req, res) {
+    res.write(createPage('Games'))
+})
+
+app.listen(2222);

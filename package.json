@@ -1,0 +1,12 @@
+{
+  "name": "ah-parcial-1",
+  "version": "1.0.0",
+  "description": "Parcial 1 de Aplicaciones Hibridas",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "server": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

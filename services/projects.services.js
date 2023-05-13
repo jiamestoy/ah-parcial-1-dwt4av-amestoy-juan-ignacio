@@ -8,11 +8,15 @@ async function getProjects(filter = {}) {
     const filterMongo = { deleted: { $ne: true } }
 
     if (filter?.section) {
-        filterMongo.$text = { $search: filter.section }
+        filterMongo.$text = { $search: filter.section };
     }
 
     if (filter?.technologies) {
-        filterMongo.technologies = { $all: filter.technologies.split(';') }
+        filterMongo.technologies = { $all: filter.technologies.split(';') };
+    }
+
+    if (filter?.clientId) {
+        filterMongo.clientId = filter.clientId;
     }
 
     await client.connect();

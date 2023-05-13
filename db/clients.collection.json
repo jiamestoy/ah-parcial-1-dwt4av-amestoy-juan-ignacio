@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6460007658819961b98b175f"
+  },
+  "name": "Pablo Álvarez",
+  "photo": "https://picsum.photos/200?random=1",
+  "description": "Primer cliente"
+},{
+  "_id": {
+    "$oid": "646000cdbc73ca7208f4076c"
+  },
+  "name": "Lorena Torres",
+  "photo": "https://picsum.photos/200?random=2",
+  "description": "La mejor cliente"
+},{
+  "_id": {
+    "$oid": "64600109bc73ca7208f4076d"
+  },
+  "name": "Marcelo Rossi",
+  "photo": "https://picsum.photos/200?random=3",
+  "description": "El peor cliente"
+},{
+  "_id": {
+    "$oid": "64600151bc73ca7208f4076e"
+  },
+  "name": "Claudia Palacios",
+  "photo": "https://picsum.photos/200?random=4",
+  "description": "La cliente más frecuente"
+},{
+  "_id": {
+    "$oid": "646001aabc73ca7208f4076f"
+  },
+  "name": "Sebastián Caballero",
+  "photo": "https://picsum.photos/200?random=5",
+  "description": "Nunca hizo un pedido"
+}]

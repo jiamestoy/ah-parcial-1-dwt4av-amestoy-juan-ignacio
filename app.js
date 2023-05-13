@@ -1,31 +1,13 @@
-//import { createServer } from 'node:http';
-import { createPage } from './pages/helper.js';
 import express from 'express';
+import ProjectsRoute from './routes/projects.routes.js';
+import ProjectsRouteApi from './api/routes/projects.api.routes.js';
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use('/api', express.json());
 
-app.get('/', function(req, res) {
-    res.write(createPage('Home'))
-})
-
-app.get('/mobile', function(req, res) {
-    res.write(createPage('Mobile'))
-})
-
-app.get('/landing', function(req, res) {
-    res.write(createPage('Landing Page'))
-})
-
-app.get('/webapp', function(req, res) {
-    res.write(createPage('Web App'))
-})
-
-app.get('/ecommerce', function(req, res) {
-    res.write(createPage('e-Commerce'))
-})
-
-app.get('/games', function(req, res) {
-    res.write(createPage('Games'))
-})
+app.use('/', express.static('public'));
+app.use(ProjectsRoute);
+app.use('/api', ProjectsRouteApi);
 
 app.listen(2222);

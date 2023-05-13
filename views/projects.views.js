@@ -96,7 +96,13 @@ function createContent(title, project) {
                                         <ul>
                                             <li> Descripción: ` + project.description + `</li>
                                             <li> Repositorio: <a href="` + project.link + `">Link</a></li>
-                                            <li> Tecnología: ` + project.technologies + `</li>
+                                            <li> Tecnología: <ul>`
+                                            
+                                            for (let technology of project.technologies) {
+                                                html+= `<li>` + technology + `</li>`
+                                            }                                            
+                                            
+                                            html += `</ul></li>
                                             <li> Sección: ` + title + `</li>
                                         </ul>
                                         
@@ -137,7 +143,7 @@ function createHome() {
                                 <li>PHP</li>
                                 <li>Vue</li>
                                 <li>Laravel</li>
-                                <li>Bases de datos relaciones (MySQL, MariaDB)</li>
+                                <li>Bases de datos relacionales (MySQL, MariaDB)</li>
                             </ul>
 
                             <h3 class="fs-5 fw-semibold">Software</h3>
